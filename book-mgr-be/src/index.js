@@ -7,22 +7,6 @@ const app = new Koa();
 //通过app.use注册中间件
 //中间件本质上是一个函数
 //context 上下文-当前请求的相关信息都在里面
-app.use(async (context,next) => {
-    console.log(1);
-    await next();
-    console.log(4);
-});
-
-app.use(async(context,next) => {
-    console.log(2);
-    await next();
-    console.log(5);
-});
-app.use(async(context,next) => {
-    console.log(2);
-    // await next();
-    console.log(6);
-});
 
 
 
